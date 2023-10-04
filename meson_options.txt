@@ -322,7 +322,7 @@ option(
 option(
     'insecure-disable-xss',
     type: 'feature',
-    value: 'disabled',
+    value: 'enabled',
     description: 'Disable XSS preventions'
 )
 
