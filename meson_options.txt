@@ -41,7 +41,7 @@ option ('https_port', type : 'integer', min : 1, max : 65535, value : 443, descr
 option ('insecure-disable-csrf', type : 'feature', value : 'disabled', description : 'Disable CSRF prevention checks.Should be set to false for production systems.')
 option ('insecure-disable-ssl', type : 'feature', value : 'disabled', description : 'Disable SSL ports. Should be set to false for production systems.')
 option ('insecure-disable-auth', type : 'feature', value : 'disabled', description : 'Disable authentication on all ports. Should be set to false for production systems')
-option ('insecure-disable-xss', type : 'feature', value : 'disabled', description : 'Disable XSS preventions')
+option ('insecure-disable-xss', type : 'feature', value : 'enabled', description : 'Disable XSS preventions')
 option ('insecure-tftp-update', type : 'feature', value : 'disabled', description : '''Enable TFTP based firmware update transactions through Redfish UpdateService.SimpleUpdate.''')
 option ('insecure-push-style-notification',type : 'feature', value : 'disabled', description : 'Enable HTTP push style eventing feature')
 option ('insecure-enable-redfish-query', type : 'feature', value : 'disabled', description : 'Enables Redfish query parameters.  This feature is experimental, and has not been tested against the full limits of user-facing behavior.  It is not recommended to enable on production systems at this time.')
