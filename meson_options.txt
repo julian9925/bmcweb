@@ -20,11 +20,11 @@ option('redfish-dump-log', type : 'feature', value : 'disabled', description : '
 option('redfish-dbus-log', type : 'feature', value : 'disabled', description : 'Enable DBUS log service transactions through Redfish. Paths are under \'/redfish/v1/Systems/system/LogServices/EventLog/Entries\'')
 option('redfish-host-logger', type : 'feature', value : 'enabled', description : 'Enable host log service transactions based on phosphor-hostlogger through Redfish.  Paths are under \'/redfish/v1/Systems/system/LogServices/HostLogger\'')
 option('redfish-provisioning-feature', type : 'feature', value : 'disabled', description : 'Enable provisioning feature support in redfish. Paths are under \'/redfish/v1/Systems/system/\'')
-option('bmcweb-logging', type : 'feature', value : 'disabled', description : 'Enable output the extended debug logs')
+option('bmcweb-logging', type : 'feature', value : 'enabled', description : 'Enable output the extended debug logs')
 option('basic-auth', type : 'feature', value : 'enabled', description : '''Enable basic authentication''')
-option('session-auth', type : 'feature', value : 'enabled', description : '''Enable session authentication''')
-option('xtoken-auth', type : 'feature', value : 'enabled', description : '''Enable xtoken authentication''')
-option('cookie-auth', type : 'feature', value : 'enabled', description : '''Enable cookie authentication''')
+option('session-auth', type : 'feature', value : 'disabled', description : '''Enable session authentication''')
+option('xtoken-auth', type : 'feature', value : 'disabled', description : '''Enable xtoken authentication''')
+option('cookie-auth', type : 'feature', value : 'disabled', description : '''Enable cookie authentication''')
 option('mutual-tls-auth', type : 'feature', value : 'enabled', description : '''Enables authenticating users through TLS client certificates. The insecure-disable-ssl must be disabled for this option to take effect.''')
 option('ibm-management-console', type : 'feature', value : 'disabled', description : 'Enable the IBM management console specific functionality. Paths are under \'/ibm/v1/\'')
 option('google-api', type : 'feature', value : 'disabled', description : 'Enable the Google specific functionality. Paths are under \'/google/v1/\'')
@@ -38,10 +38,10 @@ option ('https_port', type : 'integer', min : 1, max : 65535, value : 443, descr
 # the implications of doing so.In general, enabling these options will cause security
 # problems of varying degrees
 
-option ('insecure-disable-csrf', type : 'feature', value : 'disabled', description : 'Disable CSRF prevention checks.Should be set to false for production systems.')
+option ('insecure-disable-csrf', type : 'feature', value : 'enabled', description : 'Disable CSRF prevention checks.Should be set to false for production systems.')
 option ('insecure-disable-ssl', type : 'feature', value : 'disabled', description : 'Disable SSL ports. Should be set to false for production systems.')
 option ('insecure-disable-auth', type : 'feature', value : 'disabled', description : 'Disable authentication on all ports. Should be set to false for production systems')
-option ('insecure-disable-xss', type : 'feature', value : 'disabled', description : 'Disable XSS preventions')
+option ('insecure-disable-xss', type : 'feature', value : 'enabled', description : 'Disable XSS preventions')
 option ('insecure-tftp-update', type : 'feature', value : 'disabled', description : '''Enable TFTP based firmware update transactions through Redfish UpdateService.SimpleUpdate.''')
 option ('insecure-push-style-notification',type : 'feature', value : 'disabled', description : 'Enable HTTP push style eventing feature')
 option ('insecure-enable-redfish-query', type : 'feature', value : 'disabled', description : 'Enables Redfish query parameters.  This feature is experimental, and has not been tested against the full limits of user-facing behavior.  It is not recommended to enable on production systems at this time.')
